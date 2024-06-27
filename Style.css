@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    perspective: 1000px;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    border: 5px solid #333;
+    border-radius: 15px;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.animated-image {
+    width: 100%;
+    height: auto;
+    transition: transform 1s;
+}
+
+.container:hover {
+    transform: rotateY(180deg);
+}
+
+.container:hover .animated-image {
+    transform: scale(1.2);
+}
